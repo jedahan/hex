@@ -31,7 +31,7 @@ The Hex project is all about music and its very important for us to have a acess
 
 As a user you should start by [installing](http://rust-lang.org/install.html) Rust and compiling the [server](server). It should pull in all necessary libraries. Then you can define the configuration as described there. This gives you a webinterface to manage your music, download, upload and play it. I'm using a `systemd` job to start the [nightly-worker](nightly-worker/) every night. If you want to use the [stream-client](stream-client/) and start using tokens, then please contact me, we built a prototype with a [chip](getchip.com) and used a MFC522 reader to read out the tokens.
 
-Note that Hex requires some unstable features which require a nightly rust compiler. Try `cargo +nightly build` to start using or developing for Hex.
+Note that Hex requires some unstable features which require a nightly rust compiler. Try `cargo +nightly build` to start using or developing for Hex. hex-cli also depends on the chromaprint lib, which can be installed via your package manager (`brew install chromaprint` on macOS, for example).
 
 *Will Hex support my file format in the futures?*
 
