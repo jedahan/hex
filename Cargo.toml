@@ -14,14 +14,14 @@ members = [
 
 # exclude zyklop since it is built for the pocket CHIP
 # exclude music-container because it does not build
+# exclude nightly-worker because it depends on an unknown crate hex_conf
 default-members = [
     "conf",
     "database",
     "database/gossip",
     "server",
     "server/protocol",
-    "cli",
-    "nightly-worker"
+    "cli"
 ]
 
 [profile.release]
