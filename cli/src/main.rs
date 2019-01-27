@@ -36,7 +36,7 @@ fn main() {
     let db_path = path.join("music.db");
 
     let mut gossip = GossipConf::new();
-    
+
     if let Some(ref peer) = conf.peer {
         gossip = gossip.addr((conf.host, peer.port));
         gossip = gossip.id(peer.id());
@@ -61,8 +61,8 @@ fn main() {
         io::stdout().flush().ok().expect("Could not flush stdout");
 
         // get next line
-        let line; 
-        
+        let line;
+
         let stdin = io::stdin();
         let mut iterator = stdin.lock().lines();
 
@@ -121,7 +121,8 @@ fn main() {
                 return;
             },
             _ => {
-                println!("Unsupported action!");
+                println!("Supported actions:");
+                println!("  show, delete, add-playlist, sync, play, modify, quit");
             }
         }
     }
