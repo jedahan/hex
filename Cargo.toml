@@ -12,8 +12,20 @@ members = [
     "nightly-worker"
 ]
 
+# exclude zyklop from default members, since it is built for the pocket CHIP
+default-members = [
+    "conf",
+    "database",
+    "database/gossip",
+    "music-container",
+    "server",
+    "server/protocol",
+    "cli",
+    "nightly-worker"
+]
+
 [profile.release]
 # Tell `rustc` to optimize for small code size.
-opt-level = "s" 
+opt-level = "s"
 debug = false
 lto = true
