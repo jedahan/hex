@@ -12,12 +12,12 @@ members = [
     "nightly-worker"
 ]
 
-# exclude zyklop from default members, since it is built for the pocket CHIP
+# exclude zyklop since it is built for the pocket CHIP
+# exclude music-container because it does not build
 default-members = [
     "conf",
     "database",
     "database/gossip",
-    "music-container",
     "server",
     "server/protocol",
     "cli",
